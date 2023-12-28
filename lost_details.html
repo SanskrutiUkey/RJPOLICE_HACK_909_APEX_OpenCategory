@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha384-lB5U89Z2S1b8D2eKny5tqbFoRcF1f8oL4qcGx1fR5cIQf6TkC14BAVk0t21ObDTr" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('bg_image.jpg');
+            background-size: cover;
+            background-position: center center;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .input-field {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        select,
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .checkbox-field {
+            display: flex;
+            align-items: center;
+        }
+
+        .checkbox-field input {
+            margin-right: 10px;
+        }
+
+        .btn {
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #010701;
+        }
+
+        .link-text {
+            color: blue;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    </style>
+    <title>Lost Details</title>
+</head>
+<body>
+    <div class="container">
+        <form action="feedback.html" method="post">
+            <h1>Lost Details Form</h1>
+
+            <div class="input-field">
+                <label for="productName">Name of the Product:</label>
+                <input type="text" id="productName" name="productName" required>
+            </div>
+
+            <div class="input-field">
+                <label for="productColor">Color of the Product:</label>
+                <input type="text" id="productColor" name="productColor" required>
+            </div>
+
+            <div class="input-field">
+                <label for="productSize">Size of the Product:</label>
+                <select id="productSize" name="productSize" required>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+            </div>
+
+            <div class="input-field">
+                <label for="lostDateTime">When it was lost:</label>
+                <input type="datetime-local" id="lostDateTime" name="lostDateTime" required>
+            </div>
+
+            <div class="input-field">
+                <label for="lostReason">How it was lost (reason):</label>
+                <textarea id="lostReason" name="lostReason" rows="5" maxlength="500" required></textarea>
+            </div>
+
+            <div class="input-field">
+                <label for="lostLocation">Where it was lost (address, location):</label>
+                <textarea id="lostLocation" name="lostLocation" rows="5" required></textarea>
+            </div>
+
+            <div class="input-field">
+                <label for="photo">Upload Photo (if available):</label>
+                <input type="file" id="photo" name="photo" accept="image/*">
+            </div>
+
+
+            <div class="input-field">
+                <span class="link-text" onclick="redirectToTermsAndAbout('terms')">T&C or About us</span>
+
+            </div>
+
+
+            <div class="checkbox-field">
+                <input type="checkbox" id="acknowledgeCheckbox" required>
+                <label for="acknowledgeCheckbox" style="color: rgb(213, 17, 56);">All the required details are correct</label>
+            </div>
+
+            <input type="submit" value="Submit" class="btn">
+        </form>
+    </div>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function () {
+            window.location.href = 'feedback.html';
+        });
+    </script>
+
+    <script>
+        function redirectToTermsAndAbout(section) {
+            window.location.href = `terms_and_about.html#${section}`;
+        }
+    </script>
+</body>
+</html>

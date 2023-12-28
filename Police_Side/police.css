@@ -1,0 +1,86 @@
+/* police.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Use your desired font stack */
+    background: url('bg_image.jpg'); /* Add your background image file path here */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1e1e1;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(243, 239, 239, 0.9); /* Faint white with transparency */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;    
+}
+
+.login-form {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px; /* Adjust the maximum width as needed */
+    width: 90%;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 35px;
+    color: #0f0202;
+    margin-bottom: 10px;
+}
+
+.input-field {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+input {
+    width: calc(100% - 40px); /* Adjusted width to accommodate icon */
+    padding: 10px;
+    padding-left: 40px; /* Added left padding to accommodate icon */
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-field i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #110000;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #010501;
+}
+
+.signin-signup {
+    display: flex;
+}
+
+.form-block {
+    flex: 1;
+    padding: 20px;
+}
